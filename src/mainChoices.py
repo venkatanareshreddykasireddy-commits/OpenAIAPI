@@ -14,7 +14,12 @@ def main():
         ]
     )
     
-    # Print the response content from the API
+# Print the response content from the API
+    # The choices field is a list — grab the first item
+    print(response.choices[0])
+    # That Choice has a .message attribute
+    print(response.choices[0].message)
+    # And .message has a .content attribute - the plain text string
     result = response.choices[0].message.content
     print(result)
 
